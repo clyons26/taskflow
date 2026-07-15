@@ -117,3 +117,18 @@ button:hover {
     margin-top: 30px;
 
 }
+#taskList li {
+
+    background: #2b1833;
+
+    margin-top: 15px;
+
+    padding: 18px;
+
+    border-left: 5px solid #d4af37;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+
+}
