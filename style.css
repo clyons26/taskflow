@@ -132,3 +132,47 @@ button:hover {
     font-size: 18px;
 
 }
+#taskList li {
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background: #2b1833;
+
+    margin-top: 15px;
+
+    padding: 18px;
+
+    border-left: 5px solid #d4af37;
+
+    border-radius: 10px;
+
+}
+
+
+#taskList span {
+
+    flex: 1;
+
+}
+
+
+.completed {
+
+    text-decoration: line-through;
+
+    opacity: .5;
+
+}
+
+
+#taskList button {
+
+    background: #4a154b;
+
+    color: white;
+
+    padding: 8px 15px;
+
+}
