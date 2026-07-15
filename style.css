@@ -1,1 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #120814, #24102b);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.container {
+
+    width: 90%;
+    max-width: 650px;
+
+    background: #1c1322;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 0 35px rgba(212,175,55,.25);
+
+}
+
+h1 {
+
+    text-align: center;
+
+    color: #d4af37;
+
+    font-size: 50px;
+
+}
+
+.subtitle {
+
+    text-align: center;
+
+    color: #cccccc;
+
+    margin-top: 10px;
+    margin-bottom: 35px;
+
+}
+
+.input-area {
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+input {
+
+    flex: 1;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2b1833;
+
+    color: white;
+
+    font-size: 16px;
+
+}
+
+input:focus {
+
+    outline: 2px solid #d4af37;
+
+}
+
+button {
+
+    padding: 15px 25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #d4af37;
+
+    color: black;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+button:hover {
+
+    transform: scale(1.05);
+
+}
+
+#taskList {
+
+    list-style: none;
+
+    margin-top: 30px;
+
+}
