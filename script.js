@@ -1,4 +1,4 @@
-alert("JavaScript is connected!");
+console.log("TASKFLOW LOADED");
 const taskInput = document.getElementById("taskInput");
 const addButton = document.getElementById("addTask");
 const taskList = document.getElementById("taskList");
