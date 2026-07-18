@@ -163,3 +163,38 @@ function saveTasks(){
     );
 
 }
+function updateStats(){
+
+    const total = tasks.length;
+
+
+    const completed = tasks.filter(function(task){
+
+        return task.completed;
+
+    }).length;
+
+
+    const remaining = total - completed;
+
+
+    totalTasks.textContent = total;
+
+    completedTasks.textContent = completed;
+
+    remainingTasks.textContent = remaining;
+
+
+    let percent = 0;
+
+
+    if(total > 0){
+
+        percent = (completed / total) * 100;
+
+    }
+
+
+    progressBar.style.width = percent + "%";
+
+}
