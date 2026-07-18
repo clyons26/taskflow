@@ -63,3 +63,18 @@ function addTask() {
     taskInput.value = "";
 
 }
+function saveTasks() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function loadTasks() {
+    const savedTasks = localStorage.getItem("tasks");
+
+    if (savedTasks) {
+        tasks = JSON.parse(savedTasks);
+
+        tasks.forEach(function(task) {
+            createTask(task.text, task.completed);
+        });
+    }
+}
