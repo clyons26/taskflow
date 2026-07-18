@@ -2,6 +2,9 @@ console.log("TASKFLOW LOADED");
 const taskInput = document.getElementById("taskInput");
 const addButton = document.getElementById("addTask");
 const taskList = document.getElementById("taskList");
+console.log(taskInput);
+console.log(addButton);
+console.log(taskList);
 
 let tasks = [];
 
