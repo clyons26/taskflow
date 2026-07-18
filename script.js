@@ -12,6 +12,8 @@ let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 tasks.forEach(createTask);
 
+updateStats();
+
 
 addButton.addEventListener("click", addTask);
 
