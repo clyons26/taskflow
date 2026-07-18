@@ -1,23 +1,27 @@
+const taskInput = document.getElementById("taskInput");
+const addButton = document.getElementById("addTask");
+const taskList = document.getElementById("taskList");
+
 const totalTasks = document.getElementById("totalTasks");
 const completedTasks = document.getElementById("completedTasks");
 const remainingTasks = document.getElementById("remainingTasks");
 const progressBar = document.getElementById("progressBar");
-const taskInput = document.getElementById("taskInput");
-const addButton = document.getElementById("addTask");
-const taskList = document.getElementById("taskList");
 
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 
+// Load saved tasks
 tasks.forEach(createTask);
 
 updateStats();
 
 
+// Add button
 addButton.addEventListener("click", addTask);
 
 
+// Press Enter to add
 taskInput.addEventListener("keypress", function(event){
 
     if(event.key === "Enter"){
@@ -29,6 +33,7 @@ taskInput.addEventListener("keypress", function(event){
 });
 
 
+// Add a task
 function addTask(){
 
     const text = taskInput.value.trim();
@@ -59,12 +64,16 @@ function addTask(){
     createTask(task);
 
 
+    updateStats();
+
+
     taskInput.value = "";
 
 }
 
 
 
+// Create task on screen
 function createTask(task){
 
 
@@ -101,6 +110,7 @@ function createTask(task){
 
 
 
+    // Complete task
     checkbox.addEventListener("change", function(){
 
 
@@ -115,11 +125,14 @@ function createTask(task){
 
         saveTasks();
 
+        updateStats();
+
 
     });
 
 
 
+    // Delete task
     deleteButton.addEventListener("click", function(){
 
 
@@ -135,6 +148,8 @@ function createTask(task){
 
         saveTasks();
 
+        updateStats();
+
 
     });
 
@@ -147,7 +162,6 @@ function createTask(task){
     li.appendChild(deleteButton);
 
 
-
     taskList.appendChild(li);
 
 
@@ -155,6 +169,7 @@ function createTask(task){
 
 
 
+// Save tasks
 function saveTasks(){
 
     localStorage.setItem(
@@ -163,7 +178,12 @@ function saveTasks(){
     );
 
 }
+
+
+
+// Update dashboard numbers
 function updateStats(){
+
 
     const total = tasks.length;
 
@@ -178,6 +198,7 @@ function updateStats(){
     const remaining = total - completed;
 
 
+
     totalTasks.textContent = total;
 
     completedTasks.textContent = completed;
@@ -185,16 +206,18 @@ function updateStats(){
     remainingTasks.textContent = remaining;
 
 
-    let percent = 0;
+
+    let percentage = 0;
 
 
     if(total > 0){
 
-        percent = (completed / total) * 100;
+        percentage = (completed / total) * 100;
 
     }
 
 
-    progressBar.style.width = percent + "%";
+    progressBar.style.width = percentage + "%";
+
 
 }
