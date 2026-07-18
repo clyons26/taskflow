@@ -1,3 +1,4 @@
+alert("JavaScript is connected!");
 const taskInput = document.getElementById("taskInput");
 const addButton = document.getElementById("addTask");
 const taskList = document.getElementById("taskList");
