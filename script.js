@@ -1,3 +1,7 @@
+const totalTasks = document.getElementById("totalTasks");
+const completedTasks = document.getElementById("completedTasks");
+const remainingTasks = document.getElementById("remainingTasks");
+const progressBar = document.getElementById("progressBar");
 const taskInput = document.getElementById("taskInput");
 const addButton = document.getElementById("addTask");
 const taskList = document.getElementById("taskList");
